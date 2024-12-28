@@ -1,0 +1,159 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+body{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    background-color: black;
+    color: rgb(234, 245, 245);
+}
+.row{
+    position: relative;
+    width: 500px;
+    height: 550px;
+    background-color: rgba(19, 26, 1, 0);
+    border-radius: 20px;
+    margin-top: 100px;
+    padding-top: 60px;
+    border: 5px solid rgb(45, 204, 204);
+    box-shadow: 0 0 20px aqua;
+}
+.title{
+    font-size: 25px;
+    font-weight: bolder;
+    color: antiquewhite;
+}
+.title:hover{
+    cursor: pointer;
+    color: rgb(12, 234, 234);
+    text-shadow: 0 0 5px aqua;
+}
+.form{
+    padding: 20px;
+    text-align: left;
+    padding-left: 100px; 
+    position: relative;
+    
+}
+.label-form{
+    position: absolute;
+    font-size: 20px;
+    top: 50%;
+    left: 130px;
+    transform: translateY(-50%);
+    color: rgb(236, 238, 240);
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+.name {
+    height: 40px;
+    width: 70%;
+    border-radius: 5px;
+    border-color: rgb(239, 244, 244);
+    
+    background: transparent;
+    outline: none;
+    color: aliceblue;
+    font-size: 20px;
+}
+.name:focus {
+    outline: none;
+    border-color:aquamarine;
+    box-shadow: 0 0 10px aqua;
+}
+.name:focus + .label-form,
+.name:not(:placeholder-shown) + .label-form {
+    top: 1px;
+    font-size: 20px;
+    color: aqua;
+}
+.email {
+    height: 40px;
+    width: 70%;
+    border-radius: 5px;
+    border-color: rgb(239, 244, 244);
+    
+    background: transparent;
+    outline: none;
+    color: aliceblue;
+    font-size: 20px;
+}
+.email:focus {
+    outline: none;
+    border-color:aquamarine;
+    box-shadow: 0 0 10px aqua;
+}
+.email:focus + .label-form,
+.email:not(:placeholder-shown) + .label-form {
+    top: 1px;
+    font-size: 20px;
+    color: aqua;
+}
+.password {
+    height: 40px;
+    width: 70%;
+    border-radius: 5px;
+    border-color: rgb(239, 244, 244);
+    
+    background: transparent;
+    outline: none;
+    color: aliceblue;
+    font-size: 20px;
+}
+.password:focus {
+    outline: none;
+    border-color:aquamarine;
+    box-shadow: 0 0 10px aqua;
+}
+.password:focus + .label-form,
+.password:not(:placeholder-shown) + .label-form {
+    top: 1px;
+    font-size: 20px;
+    color: aqua;
+}
+.button{
+    height: 40px;
+    width: 75%;
+    background-color: aqua;
+    border-radius: 30px;
+    font-size: 20px;
+    font-weight: bolder;
+    color: rgb(249, 58, 5);
+}
+.button:hover{
+    box-shadow: 0 0 10px aqua;
+    color: blue;
+}
+.link{
+    color: white;
+    text-decoration: none;
+   
+}
+.link:hover{
+    color: rgb(60, 0, 255);
+    text-shadow: 0 0 5px rgb(81, 0, 255);
+}
+@media (max-width: 480px) {
+    .row {
+        padding: 15px;
+    }
+}
+p{
+    font-size: 18px;
+}
+p:hover{
+    color: aqua;
+    cursor: pointer;
+}
+.agree{
+    font-size: 18px;
+    text-align: center;
+}
+.agree:hover{
+    color: aqua;
+    cursor: pointer;
+}

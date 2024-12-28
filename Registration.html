@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="Registration.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+</head>
+<body>
+ <form onsubmit="event.preventDefault(); RegistationForm();">
+    <div class="row">
+        <span class="title">Registration Form</span><br><br>
+        <div class="form">
+            <i class="fa-solid fa-user"></i>&nbsp;
+            <input class="name" id="name" type="text" placeholder="">
+            <label class="label-form">Username</label><br></div>
+        <div class="form">
+        <i class="fa-solid fa-envelope"></i>&nbsp;
+        <input class="email" id="email" type="text" placeholder="">
+        <label class="label-form">Email</label><br></div>
+        <div class="form">
+        <i class="fa-solid fa-lock"></i>&nbsp;
+        <input class="password" id="password" type="password" placeholder="">
+        <label class="label-form">Password</label><br>
+        </div>
+        <div class="form">
+        <input type="checkbox">&nbsp;&nbsp;&nbsp;<span class="agree"> Agree to terms and conditions</span>
+        <br></div>
+        <div class="form">
+        <input class="button" id="button" type="submit" value="Register"></div>
+        <p>Already have an account?<a href="Login.html" class="link"> Login</a></p>
+    </div>
+</form>   
+    <script src="Registration.js">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+</body>
+</html>

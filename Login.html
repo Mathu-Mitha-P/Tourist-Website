@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <link rel="stylesheet" href="Login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+</head>
+<body>
+<form onsubmit="event.preventDefault(); LoginForm();">
+    <div class="row">
+        <span class="title">Login Form</span><br><br>
+        <div class="form">
+        <i class="fa-solid fa-envelope"></i>
+        <input class="email" id="email" type="text" placeholder="">
+        <label class="label-form">Email</label><br></div>
+        <div class="form">
+        <i class="fa-solid fa-lock"></i>
+        <input class="password" id="password" type="password" placeholder="">
+        <label class="label-form">Password</label><br>
+        </div>
+        <div class="form">
+        <input type="checkbox">Remember me &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="#" class="link">Forget Password?</a><br></div>
+        <div class="form">
+        <input class="button" id="button" type="submit" value="Login"></div>
+        <p>Don't have an account?<a href="Registration.html" class="link">Register</a></p>
+    </div>
+</form>
+    <script src="Login.js">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+</body>
+</html>
