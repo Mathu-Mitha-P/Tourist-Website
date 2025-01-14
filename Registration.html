@@ -9,7 +9,7 @@
     
 </head>
 <body>
- <form onsubmit="event.preventDefault(); RegistationForm();">
+ <form id="register-form">
     <div class="row">
         <span class="title">Registration Form</span><br><br>
         <div class="form">
@@ -29,12 +29,13 @@
         <input type="checkbox">&nbsp;&nbsp;&nbsp;<span class="agree"> Agree to terms and conditions</span>
         <br></div>
         <div class="form">
-        <input class="button" id="button" type="submit" value="Register"></div>
+            <button type="submit" class="submit-btn" id="register-button">Register</button>
+        </div>
         <p>Already have an account?<a href="Login.html" class="link"> Login</a></p>
     </div>
 </form>   
-    <script src="Registration.js">
+   <script src="script.js"></script>
+    <script  type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
     </script>
-    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 </body>
 </html>
