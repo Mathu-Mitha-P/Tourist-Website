@@ -115,7 +115,7 @@ body{
     font-size: 20px;
     color: aqua;
 }
-.button{
+.submit-btn{
     height: 40px;
     width: 75%;
     background-color: aqua;
@@ -124,7 +124,7 @@ body{
     font-weight: bolder;
     color: rgb(249, 58, 5);
 }
-.button:hover{
+.submit-btn:hover{
     box-shadow: 0 0 10px aqua;
     color: blue;
 }
