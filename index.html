@@ -5,66 +5,369 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tourist Website</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.0/sweetalert.min.js"></script>
 </head>
 <body>
+    <script>
+        swal("Do You want To Open the Tourist Website", {
+        dangerMode: true,
+        buttons: true,
+        } );
+    </script>
     <nav class="container">
-        <div class="info"><div class="Tourist">Tourist</div>
-            <div><a href="" class="link">Home</a></div>
-            <div><a href="" class="link">About Us</a></div>
-            <div><a href="" class="link">Tours</a></div>
-            <div><a href="" class="link">Destinations</a></div>
-            <div><a href="" class="link">Blog</a></div>
-            <div><input type="button" value="Login" class="loginbutton" onclick="login()"/></div>
-            <div><a href="contact.html" class="link">Contant Us</a></div>
-            <div><a href="" class="link"><input type="button" value="Book Now" class="button" onsubmit="return BookNow()"/></a></div>
+        <div class="header">Tourist
+            <div id="homepage">HOME</div>
+            <div id="Destinationpage">DESTINATION</div>
+            <div id="Servicepage">SERVICE</div> 
+            <div id="Gallerypage">GALLERY</div> 
+            <div id="Feedbackpage">
+                <a href="Feedback Form.html" style="color: aliceblue;">FEEDBACK</a></div>
+            <div id="bookpage">
+                <a href="Booking.html">
+                <input value="Book Now" class="book-button" onsubmit="return BookNow()">
+            </a>
+            </div>
         </div>
     </nav>
-    <div class="img"><img src="homepage image1.jpg" width="100%">
-    <div class="color"><div class="marquee">
-        <span>Travel around the World</span></div></div></div>
-    <div id="placesToVisit" class="place">Places To Vist</div>
-    <div class="places">
-        <img src="kanyakumari-beach.jpg" width="700px" height="600px" class="img">
-        <img src="Ooty.webp" width="720px" height="600px" class="img">
+    <div id="home"style="color: green;">Home</div>
+    <div class="img"><img src="Image-MainPage.jpg" width="100%" class="img1">
+        <div class="Login-register">
+        <button class="login-btn"><a href="Login.html">LOGIN</a></button>
+        <button class="register-btn"><a href="Registration.html">REGISTER</a></button>
+        <div class="marquee">
+            <span>WELCOME</span>
+        </div>
     </div>
-    <div class="placename">
-        <div>KANNIYAKUMARI</div>
-        <div>OOTY</div>
-    </div>
-    <div class="places">
-        <div> <img src="Thiruvannamalai.jpg" width="700px" height="600px" class="image"></div>
-     <div><img src="Kerala-Tourism.webp" width="720px" height="600px" class="image"></div>
-     </div>
-     <div class="placename">
-         <div>THIRUVANNAMALAI</div>
-         <div>KERALA</div>
-     </div>
-     <div class="places">
-        <div> <img src="madurai.webp" width="700px" height="600px" class="image"></div>
-     <div><img src="Thanjavur.webp" width="720px" height="600px" class="image"></div>
-     </div>
-     <div class="placename">
-         <div>MADURAI</div>
-         <div>THANJAVUR</div>
-     </div>
-    <div class="black"><div class="tour"><b style="font-size: 25px;">TOURIST WEBSITE<br></b></br>Explore Your Travel.
-
-    </div>
-    <div class="link"><b style="font-size: 25px;">SOCIAL LINK</b><br><br>
-        <i class="fa-brands fa-instagram"></i><br>
-        <i class="fa-brands fa-linkedin" ></i><br>
-        <i class="fa-brands fa-twitter" ></i><br>
-        <i class="fa-brands fa-facebook" ></i>
-    </div>
-    <div class="contact"><b style="font-size: 25px;">CONTACT ME</b><br><br>
-        <i class="fa-solid fa-envelope" style="color: lightblue;"></i>&nbsp;&nbsp;<a href="pjmathumithait@gmail.com">pjmathumithait@gmail.com</a><br><br>
-    <i class="fa-solid fa-location-dot" style="color: lightblue;"></i> South Kundal, Kanniyakumari<br>
-</div>
-</div>
-    <script src="script.js">
+    
         
-    </script>
-</body>
-</html>
+    </div>
+   
+    <div id="placesToVisit" class="place">POPULAR DESTINATION</div>
+    </div>
+    <div class="Places">
+       <div class="place-info">
+            <div class="box">
+                <div class="image-container">
+                <img src="kanyakumari-beach.jpg" width="460px" height="400px" class="image">
+                <div class="hover-text">KANNIYAKUMARI
+                    <br>
+                    <button class="buttons"><a href="Kanyakumari.html">VISIT</a></button>
+                </div></div>
+            </div>
+            <div class="box">
+                <div class="image-container">
+                <img src="Ooty.webp" width="460px" height="400px" class="image">
+                <div class="hover-text">OOTY<br>
+                    <button class="buttons"><a href="Ooty.html">VISIT</a></button>
+                </div></div>
+            </div>
+            <div class="box">
+                <div class="image-container">
+                <img src="Kerala-Tourism.webp" width="460px" height="400px" class="image">
+                <div class="hover-text">KERALA
+                    <br>
+                    <button class="buttons"><a href="kerala.html">VISIT</a></button>
+                </div></div>
+             </div>
+             <div class="box">
+                <div class="image-container">
+                <img src="Thiruvannamalai.jpg" width="460px" height="400px" class="image">
+                <div class="hover-text">THIRUVANNAMALAI
+                    <br>
+                    <button class="buttons"><a href="Thiruvannamalai.html">VISIT</a></button>
+                </div></div>
+             </div>
+             <div class="box">
+                <div class="image-container">
+                <img src="madurai.webp" width="460px" height="400px" class="image">
+                <div class="hover-text">MADURAI
+                    <br>
+                    <button class="buttons"><a href="Madurai.html">VISIT</a></button>
+                </div></div>
+             </div>
+             <div class="box">
+                <div class="image-container">
+                <img src="Thanjavur.webp" width="460px" height="400px" class="image">
+                <div class="hover-text">THANJAVUR
+                    <br>
+                    <button class="buttons"><a href="Thanjavur.html">VISIT</a></button>
+                </div></div>
+             </div>
+    </div> 
+    <div id="service" class="place">SERVICE</div>
+    </div>
+    <div class="Places">
+       <div class="place-info">
+            <div class="box">  <br>
+                <i class="fa-sharp-duotone fa-solid fa-hotel" style="color:yellow"></i>             
+                    <p>Affordable Hotels</p>
+            </div>
+            <div class="box"><br>
+                <i class="fa-sharp-duotone fa-solid fa-utensils" style="color:yellow"></i>
+                    <p>Food And Drinks</p>                
+            </div>
+            <div class="box">    <br> 
+                <i class="fa-sharp-duotone fa-solid fa-shield-alt" style="color:yellow"></i>          
+                    <p>Safety Guide</p>
+             </div>
+             <div class="box"> <br>         
+                <i class="fa-sharp-duotone fa-solid fa-earth-asia" style="color:yellow"></i>    
+                    <p>Around the World</p>
+             </div>
+             <div class="box"><br>
+                <i class="fa-sharp-duotone fa-solid fa-plane" style="color:yellow"></i>
+                <p>Fatest Travel</p>
+             </div>
+             <div class="box"><br>
+                <i class="fa-sharp-duotone fa-solid fa-mountain" style="color:yellow"></i>
+                <p>Adventures</p>
+                </div>
+             </div>
+    </div> 
+    <div id="gallery" class="place">GALLERY</div>
+<div class="Places">
+   <div class="place-info">
+        <div class="box">
+            <div class="image-container">
+            <img src="vivekananda-rock-memorial.webp" width="460px" height="400px" class="image">
+            <div class="hover-text">Vivekanada Rock Memorial</div>
+        </div>
+        </div>
+        <div class="box">
+            <div class="image-container">
+            <img src="thiruvalluvar-statue.jpg" width="460px" height="400px" class="image">
+            <div class="hover-text">Thiruvalluver Statue
+            </div></div>
+        </div>
+        <div class="box">
+            <div class="image-container">
+            <img src="Kanyakumari-Kumari-Amman-Temple.jpg" width="460px" height="400px" class="image">
+            <div class="hover-text">Kumari Amman Temple               
+            </div></div>
+         </div>
+         <div class="box">
+            <div class="image-container">
+            <img src="Gandhi Memorial Museum.jpg" width="460px" height="400px" class="image">
+            <div class="hover-text">Gandhi Memorial
+            </div></div>
+         </div>
+         <div class="box">
+            <div class="image-container">
+            <img src="baywatch-park-kanyakumari.jpg" width="460px" height="400px" class="image">
+            <div class="hover-text">Baywatch Park
+            </div></div>
+         </div>
+         <div class="box">
+            <div class="image-container">
+            <img src="Sunset_Point_Kanyakumari.avif" width="460px" height="400px" class="image">
+            <div class="hover-text">Sunset Point Kanniyakumari
+         </div></div>
+</div> 
+
+<div class="box">
+    <div class="image-container">
+    <img src="ooty-lake.webp" width="460px" height="400px" class="image">
+    <div class="hover-text">Ooty Lake
+    </div></div>
+</div>
+<div class="box">
+    <div class="image-container">
+    <img src="Botanical_Gardens_-_.jpg" width="460px" height="400px" class="image">
+    <div class="hover-text">Botanical Gardens
+    </div></div>
+</div>
+<div class="box">
+    <div class="image-container">
+    <img src="Doddabetta Peak Ooty.jpg" width="460px" height="400px" class="image">
+    <div class="hover-text">Doddabetta Peak Ooty              
+    </div></div>
+ </div>
+ <div class="box">
+    <div class="image-container">
+    <img src="Nilgiri Mountain Railway Ooty.jpg" width="460px" height="400px" class="image">
+    <div class="hover-text">Nilgiri Mountain Railway
+    </div></div>
+ </div>
+ <div class="box">
+    <div class="image-container">
+    <img src="Tea Factory and Museum Ooty.jpg" width="460px" height="400px" class="image">
+    <div class="hover-text">Tea Factory and Museum
+    </div></div>
+ </div>
+ <div class="box">
+    <div class="image-container">
+    <img src="Rose Garden Ooty.jpg" width="460px" height="400px" class="image">
+    <div class="hover-text">Rose Garden
+ </div></div>
+</div> 
+
+<div class="box">
+    <div class="image-container">
+    <img src="ALLEPPEY.jpg" width="460px" height="400px" class="image">
+    <div class="hover-text">Alleppey
+    </div></div>
+</div>
+<div class="box">
+    <div class="image-container">
+    <img src="munnar.avif" width="460px" height="400px" class="image">
+    <div class="hover-text">Munnar
+    </div></div>
+</div>
+<div class="box">
+    <div class="image-container">
+    <img src="Fort Kochi.jpg" width="460px" height="400px" class="image">
+    <div class="hover-text">Fort Kochi               
+    </div></div>
+ </div>
+ <div class="box">
+    <div class="image-container">
+    <img src="periyar-wildlife-sanctuary.jpg" width="460px" height="400px" class="image">
+    <div class="hover-text">Thekkay(Periyar Wildlife Sanctuary)
+    </div></div>
+ </div>
+ <div class="box">
+    <div class="image-container">
+    <img src="kumarakom.avif" width="460px" height="400px" class="image">
+    <div class="hover-text">Kumarakom
+    </div></div>
+ </div>
+ <div class="box">
+    <div class="image-container">
+    <img src="Wayanad.jpg" width="460px" height="400px" class="image">
+    <div class="hover-text">Wayanad
+ </div></div>
+</div> 
+
+<div class="box">
+    <div class="image-container">
+    <img src="Annamalaiyar Temple Thiruvannamalai.jpg" width="460px" height="400px" class="image">
+    <div class="hover-text">Annamalaiyar Temple
+    </div></div>
+</div>
+<div class="box">
+    <div class="image-container">
+    <img src="arunachala-hill-thiruvannamalai.jpeg" width="460px" height="400px" class="image">
+    <div class="hover-text">Arunachala Hill
+    </div></div>
+</div>
+<div class="box">
+    <div class="image-container">
+    <img src="Sathanur Dam Thiruvannamalai.jpg" width="460px" height="400px" class="image">
+    <div class="hover-text">Sathanur Dam               
+    </div></div>
+ </div>
+ <div class="box">
+    <div class="image-container">
+    <img src="Pachaiamman Temple Thiruvannamalai.jpg" width="460px" height="400px" class="image">
+    <div class="hover-text">Pachaiamman Temple
+    </div></div>
+ </div>
+ <div class="box">
+    <div class="image-container">
+    <img src="A small hike around Virupaksha Caves and Skand Ashram in Tiruvannamalai Temple.jpg" width="460px" height="400px" class="image">
+    <div class="hover-text">Virupaksha Cave
+    </div></div>
+ </div>
+ <div class="box">
+    <div class="image-container">
+    <img src="yogi-ram-suratkumar-ashram.jpg" width="460px" height="400px" class="image">
+    <div class="hover-text">Yogi Ramsurarkumar Ashram
+ </div></div>
+</div> 
+
+<div class="box">
+    <div class="image-container">
+    <img src="Meenakshi-temple.jpg" width="460px" height="400px" class="image">
+    <div class="hover-text">Meenakshi Amman Temple
+    </div></div>
+</div>
+<div class="box">
+    <div class="image-container">
+    <img src="Thirumalai Nayakkar Mahal.jpg" width="460px" height="400px" class="image">
+    <div class="hover-text">Thirumalai Nayakkar Mahal
+    </div></div>
+</div>
+<div class="box">
+    <div class="image-container">
+    <img src="Samanar Hills.jpg" width="460px" height="400px" class="image">
+    <div class="hover-text">Samanar Hills             
+    </div></div>
+ </div>
+ <div class="box">
+    <div class="image-container">
+    <img src="Gandhi Memorial Museum.jpg" width="460px" height="400px" class="image">
+    <div class="hover-text">Gandhi Memorial Museum
+    </div></div>
+ </div>
+ <div class="box">
+    <div class="image-container">
+    <img src="Koodal Azhagar Temple.jpg" width="460px" height="400px" class="image">
+    <div class="hover-text">Koodal Azhagar Temple
+    </div></div>
+ </div>
+ <div class="box">
+    <div class="image-container">
+    <img src="Vandiyur Mariamman Teppakulam (Tank).jpg" width="460px" height="400px" class="image">
+    <div class="hover-text">Vandiyur Mariamman Teppakulam(Tank)
+ </div></div>
+</div> 
+
+<div class="box">
+    <div class="image-container">
+    <img src="Brihadeeswarar Temple.jpg" width="460px" height="400px" class="image">
+    <div class="hover-text">Brihadeeswarar Temple
+    </div></div>
+</div>
+<div class="box">
+    <div class="image-container">
+    <img src="Thanjavur Maratha Palace.jpg" width="460px" height="400px" class="image">
+    <div class="hover-text">Thanjavur Maratha Palace
+    </div></div>
+</div>
+<div class="box">
+    <div class="image-container">
+    <img src="Kanyakumari-Kumari-Amman-Temple.jpg" width="460px" height="400px" class="image">
+    <div class="hover-text">Saraswathi Mahal Library             
+    </div></div>
+ </div>
+ <div class="box">
+    <div class="image-container">
+    <img src="Schwartz Church.jpg" width="460px" height="400px" class="image">
+    <div class="hover-text">Schwartz Church
+    </div></div>
+ </div>
+ <div class="box">
+    <div class="image-container">
+    <img src="Thanjavur Royal Palace.avif" width="460px" height="400px" class="image">
+    <div class="hover-text">Thanjavur Royal Palace
+    </div></div>
+ </div>
+ <div class="box">
+    <div class="image-container">
+    <img src="Kumbakonam Tank.jpg" width="460px" height="400px" class="image">
+    <div class="hover-text">Kumbakonam Tank
+ </div></div>
+</div> 
+</div>
+</div>
+</div>
+
+<div class="black"><div class="tour"><b style="font-size: 25px;">TOURIST WEBSITE<br></b></br>Explore Your Travel.
+
+</div>
+<div class="link"><b style="font-size: 25px;">SOCIAL LINK</b><br><br>
+    <i class="fa-brands fa-instagram"></i><br>
+    <i class="fa-brands fa-linkedin" ></i><br>
+    <i class="fa-brands fa-twitter" ></i><br>
+    <i class="fa-brands fa-facebook" ></i>
+</div>
+<div class="contact"><b style="font-size: 25px;">CONTACT ME</b><br><br>
+    <i class="fa-solid fa-envelope" style="color: lightblue;"></i>&nbsp;&nbsp;<a href="pjmathumithait@gmail.com">pjmathumithait@gmail.com</a><br><br>
+<i class="fa-solid fa-location-dot" style="color: lightblue;"></i> South Kundal, Kanniyakumari<br>
+</div>
+</div>
+
+<script src="script.js"></script>
+    </body>
+    </html>
