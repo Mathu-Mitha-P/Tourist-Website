@@ -1,0 +1,101 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+body{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    background-color: black;
+    color: rgb(234, 245, 245);
+}
+.row{
+    position: relative;
+    width: 700px;
+    height: 650px;
+    background-color: rgba(19, 26, 1, 0);
+    border-radius: 20px;
+    margin-top: 50px;
+    padding-top: 30px;
+    border: 5px solid rgb(45, 204, 204);
+    box-shadow: 0 0 20px aqua;
+}
+.title{
+    font-size: 25px;
+    font-weight: bolder;
+    color: antiquewhite;
+}
+.title:hover{
+    cursor: pointer;
+    color: rgb(12, 234, 234);
+    text-shadow: 0 0 5px aqua;
+}
+.form{
+    padding: 20px;
+    text-align: left;
+    padding-left: 120px; 
+    position: relative;
+    
+}
+.label-form{
+    position: absolute;
+    font-size: 20px;
+    top: 50%;
+    left: 130px;
+    transform: translateY(-50%);
+    color: rgb(236, 238, 240);
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+.email,.firstname,.lastname,.city,.destination,.phone{
+    height: 40px;
+    width: 75%;
+    border-radius: 5px;
+    border-color: rgb(239, 244, 244);
+    background: transparent;
+    outline: none;
+    color: aliceblue;
+    font-size: 20px;
+}
+.email:focus ,.firstname:focus,.lastname:focus,.city:focus,.destination:focus,.phone:focus{
+    outline: none;
+    border-color:aquamarine;
+    box-shadow: 0 0 10px aqua;
+}
+.email:focus + .label-form,
+.email:not(:placeholder-shown) + .label-form,
+.firstname:focus + .label-form,
+.firstname:not(:placeholder-shown) + .label-form ,
+.lastname:focus + .label-form,
+.lastname:not(:placeholder-shown) + .label-form ,
+.city:focus + .label-form,
+.city:not(:placeholder-shown) + .label-form,
+.phone:focus + .label-form,
+.phone:not(:placeholder-shown) + .label-form,
+.destination:focus + .label-form,
+.destination:not(:placeholder-shown) + .label-form{
+    top: 1px;
+    font-size: 20px;
+    color: aqua;
+}
+.button{
+    height: 40px;
+    width: 75%;
+    background-color: aqua;
+    border-radius: 30px;
+    font-size: 20px;
+    font-weight: bolder;
+    color: rgb(249, 58, 5);
+}
+.button:hover{
+    box-shadow: 0 0 10px aqua;
+    color: blue;
+}
+
+@media (max-width: 480px) {
+    .row {
+        padding: 15px;
+    }
+}

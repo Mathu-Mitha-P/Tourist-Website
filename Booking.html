@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOOKING</title>
+    <link rel="stylesheet" href="Booking.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+</head>
+<body>
+<form id="Booking-Tour">
+    <div class="row">
+        <span class="title">TOUR BOOKING</span><br><br>
+        <div class="form">
+        <input class="firstname" id="firstname" type="text" placeholder="">
+        <label class="label-form">First Name</label><br></div>
+        <div class="form">
+        <input class="lastname" id="lastname" type="text" placeholder="">
+        <label class="label-form">Last Name</label><br></div>
+        <div class="form">
+        <input class="email" id="email" type="email" placeholder="">
+        <label class="label-form">Email</label><br></div>
+        <div class="form">
+        <input class="city" id="city" type="text" placeholder="">
+        <label class="label-form">City</label><br></div>
+        <div class="form">
+        <input class="phone" id="phone" type="tel" placeholder="">
+        <label class="label-form">Phone</label><br></div>
+        <div class="form">
+        <input class="destination" id="destination" type="text" placeholder="">
+        <label class="label-form">Destination</label><br></div>
+        <div class="form">
+        <input class="button" id="button" type="submit" value="SUBMIT"></div>
+    </div>
+</form>
+    
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+         emailjs.init('Jr7DIXpE0WAUH0MKW'); // Replace with your EmailJS public key
+
+const form = document.getElementById('Booking-Tour');
+const button = document.getElementById('button');
+
+form.addEventListener('submit', function(event) {
+  event.preventDefault();
+  button.textContent = 'Sending...';
+
+  const serviceID = 'service_lcb7ayp'; // Replace with your EmailJS service ID
+  const templateID = 'template_9sdbtpn'; // Replace with your EmailJS template ID
+
+  emailjs.sendForm(serviceID, templateID, this)
+    .then(() => {
+      button.textContent = 'SUMBIT';
+      alert('Booking Tour sent successfully!');
+      form.reset();
+    }, (err) => {
+      button.textContent = 'SUMBIT';
+      alert(JSON.stringify(err));
+    });
+});
+    </script>
+</body>
+</html>

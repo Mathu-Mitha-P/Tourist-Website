@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Feedback Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: black;
+      padding: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .form-container {
+      background:black;
+      
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 400px;
+      border: 4px solid aqua;
+      box-shadow: 0 0 50px aqua;
+    }
+    .form-container h2 {
+      text-align: center;
+      color: white;
+    }
+    .field {
+      margin-bottom: 15px;
+    }
+    .field label {
+      display: block;
+      font-size: 14px;
+      color: #555;
+      color:white;
+    }
+    .field input, .field textarea {
+      width: 94%;
+      padding: 10px;
+      font-size: 14px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      
+    }
+    .field input:hover, .field textarea:hover{
+      border: 4px solid aqua;
+      box-shadow: 0 0 30px aqua;
+    }
+    .field textarea {
+      height: 100px;
+     
+    }
+    .submit-btn {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
+      color: white;
+      background-color: #4460AA;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    .submit-btn:hover {
+      background-color: #33468b;
+      border: 4px solid aqua;
+      box-shadow: 0 0 50px aqua;
+    }
+  </style>
+</head>
+<body>
+  <div class="form-container">
+    <h2>Feedback Form</h2>
+    <form id="feedback-form">
+      <div class="field">
+        <label for="name">Name</label>
+        <input type="text" id="from_name" name="from_name" required>
+      </div>
+      <div class="field">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div class="field">
+        <label for="phone">Phone</label>
+        <input type="tel" id="phone" name="phone" required>
+      </div>
+      <div class="field">
+        <label for="feedback">Feedback</label>
+        <textarea id="feedback" name="feedback" required></textarea>
+      </div>
+      <button type="submit" class="submit-btn" id="submit-button">Send Feedback</button>
+    </form>
+  </div>
+
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script type="text/javascript">
+    emailjs.init('Jr7DIXpE0WAUH0MKW'); // Replace with your EmailJS public key
+
+    const form = document.getElementById('feedback-form');
+    const button = document.getElementById('submit-button');
+
+    form.addEventListener('submit', function(event) {
+      event.preventDefault();
+      button.textContent = 'Sending...';
+
+      const serviceID = 'service_fqpm79x'; // Replace with your EmailJS service ID
+      const templateID = 'template_plhjw5u'; // Replace with your EmailJS template ID
+
+      emailjs.sendForm(serviceID, templateID, this)
+        .then(() => {
+          button.textContent = 'Send Feedback';
+          alert('Feedback sent successfully!');
+          form.reset();
+        }, (err) => {
+          button.textContent = 'Send Feedback';
+          alert(JSON.stringify(err));
+        });
+    });
+  </script>
+</body>
+</html>
